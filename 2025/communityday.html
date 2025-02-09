@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>foss-north 2025</title>
+
+    <link rel="icon" type="image/png" href="favicon.ico">
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head><body><nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="https://foss-north.se/"><img src="images/brand-logo.png" /></a>
+        
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            
+                
+                    <li class="nav-item">
+                
+                <a class="nav-link" href="index.html">Home
+                </a>
+                </li>
+            
+                
+                    <li class="nav-item">
+                
+                <a class="nav-link" href="tickets.html">Tickets
+                </a>
+                </li>
+            
+                
+                    <li class="nav-item">
+                
+                <a class="nav-link" href="schedule.html">Schedule
+                </a>
+                </li>
+            
+                
+                    <li class="nav-item active">
+                
+                <a class="nav-link" href="communityday.html">Community Day
+                
+                    <span class="sr-only">(current)</span></a>
+                </li>
+            
+                
+                    <li class="nav-item">
+                
+                <a class="nav-link" href="contribute.html">Contribute
+                </a>
+                </li>
+            
+                
+                    <li class="nav-item">
+                
+                <a class="nav-link" href="speakers-and-talks.html">Speakers and Talks
+                </a>
+                </li>
+            
+                
+                    <li class="nav-item">
+                
+                <a class="nav-link" href="coc.html">Code of Conduct
+                </a>
+                </li>
+            
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item"><a class="nav-link" href="http://foss-north.se/">More foss events</a></li>
+        </ul>
+    </div>
+</nav><div class="container">
+        
+<h1>Community Day</h1>
+<p>The foss-north community day is a day of community activities taking place on
+<strong>April 13</strong>.</p>
+<p>We have invited a number of projects to Gothenburg and provided them with
+venues. Now it is up to you to visit them and explore!</p>
+<p><b>This day is free of charge</b>, but we would be happy if you could <a
+href="https://www.meetup.com/foss-gbg/events/306079403/">RSVP this meetup</a> for us to
+know how many your are. Some of the projects also require you <b>register your
+participation</b>. See the descriptions below for more information.</p>
+<p>Notice that you do need a ticket to get one for the rest of the conference. Get
+your's <a href="tickets.html">here</a>!</p>
+<p><i>Please notice that the list below is tentative!</i></p>
+<h2>Map</h2>
+
+<style>
+    img.olTileImage {
+        max-width: none;
+    }
+</style>
+
+<div id="mapdiv" style="height: 600px;"></div>
+
+<div class="bodybreak">&nbsp;</div>
+
+<h2>Projects</h2>
+
+
+
+    <a name="riscv" class="offsetanchor"></a>
+    <div class="row speakerrow">
+        <div class="col-md-3">
+            <div class="speaker-photo"><a href="https://www.meetup.com/goteborg-risc-v-group/"><img class="sp-image" src="images/project-riscv.png" alt="RISC-V"></a></div>
+            
+        </div>
+        <div class="col-md-9">
+            <div class="name"><a class="projectlink" href="https://www.meetup.com/goteborg-risc-v-group/">RISC-V</a></div>
+
+            <div class="links">
+            <strong></strong>
+            
+            </div>
+            
+            
+            <div class="abstract">
+                The RISC-V community will meet and discuss what's new and cool with the hottest open ISA that's out there.
+            </div>
+            
+            
+            <div class="abstract">
+                <b>Locations:</b>
+                <ul>
+                
+                    <li>T.B.D.</li>
+                
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <a name="flutter" class="offsetanchor"></a>
+    <div class="row speakerrow">
+        <div class="col-md-3">
+            <div class="speaker-photo"><a href="https://www.meetup.com/flutter-gothenburg/"><img class="sp-image" src="images/project-flutter.png" alt="Flutter"></a></div>
+            
+        </div>
+        <div class="col-md-9">
+            <div class="name"><a class="projectlink" href="https://www.meetup.com/flutter-gothenburg/">Flutter</a></div>
+
+            <div class="links">
+            <strong></strong>
+            
+            </div>
+            
+            
+            <div class="abstract">
+                Flutter Gothenburg will hold a meetup in conjunction with foss-north. If you enjoy making cross-platform UIs, this might be something for you!
+            </div>
+            
+            
+            <div class="abstract">
+                <b>Locations:</b>
+                <ul>
+                
+                    <li>T.B.D.</li>
+                
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+<script src="js/OpenLayers.js"></script>
+<script>
+    map = new OpenLayers.Map("mapdiv", { controls: [] });
+    map.addLayer(new OpenLayers.Layer.OSM("OSM", ["https://a.tile.openstreetmap.org/${z}/${x}/${y}.png", "https://b.tile.openstreetmap.org/${z}/${x}/${y}.png", "https://c.tile.openstreetmap.org/${z}/${x}/${y}.png"] ));
+
+    map.addControl(new OpenLayers.Control.PanZoomBar());
+    map.addControl(new OpenLayers.Control.Permalink());
+    map.addControl(new OpenLayers.Control.Permalink('permalink'));
+    
+    var markers = new OpenLayers.Layer.Markers( "Markers" );
+    map.addLayer(markers);
+    
+    var projection = new OpenLayers.Projection("EPSG:4326");
+    
+    var icon = new OpenLayers.Icon("images/brand-logo.png");
+    var marker;
+    
+    
+        
+        /* Start of loop */
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat( 11.97372, 57.68926 ).transform(projection, map.getProjectionObject()), icon.clone());
+        marker.events.register("click", marker, function() { location.hash = "#riscv"; });
+        markers.addMarker(marker);
+        /* End of loop */
+        
+    
+        
+        /* Start of loop */
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat( 11.966646, 57.689343 ).transform(projection, map.getProjectionObject()), icon.clone());
+        marker.events.register("click", marker, function() { location.hash = "#flutter"; });
+        markers.addMarker(marker);
+        /* End of loop */
+        
+    
+    
+
+    map.setCenter(new OpenLayers.LonLat(11.9766646, 57.689343).transform(projection, map.getProjectionObject()), 13);
+</script>
+
+
+    </div>
+<div class="footer">
+foss-north and foss-gbg are arranged by Free Open Source Software North Conferences ek.f&ouml;r.<br />
+Contact: info -at- foss-north.se.
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script></body>
+
+</html>
