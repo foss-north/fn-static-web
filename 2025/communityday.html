@@ -173,6 +173,110 @@ your's <a href="tickets.html">here</a>!</p>
         </div>
     </div>
 
+    <a name="gbgcpp" class="offsetanchor"></a>
+    <div class="row speakerrow">
+        <div class="col-md-3">
+            <div class="speaker-photo"><a href="https://www.meetup.com/gbgcpp/events/306437257/"><img class="sp-image" src="images/project-gbgcpp.png" alt="Gothenburg C++ Meetup"></a></div>
+            
+        </div>
+        <div class="col-md-9">
+            <div class="name"><a class="projectlink" href="https://www.meetup.com/gbgcpp/events/306437257/">Gothenburg C++ Meetup</a></div>
+
+            <div class="links">
+            <strong>13:00 - 17:00</strong>
+            
+            </div>
+            
+            
+            <div class="abstract">
+                Welcome to a special GBGCPP meetup. We start the event with a hackathon. Bring your laptop and a project/idea to work on and let's see what you can make with C++ and FOSS libraries!
+            </div>
+            
+            <div class="abstract">
+                After a short break, Björn Andersson will deliver his presentation.
+            </div>
+            
+            
+            <div class="abstract">
+                <b>Locations:</b>
+                <ul>
+                
+                    <li>WirelessCar, Vädursgatan 6, 412 50 Göteborg</li>
+                
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <a name="owasp" class="offsetanchor"></a>
+    <div class="row speakerrow">
+        <div class="col-md-3">
+            <div class="speaker-photo"><a href="https://www.meetup.com/owasp-gothenburg-meetup-group/"><img class="sp-image" src="images/project-owasp.png" alt="OWASP Göteborg"></a></div>
+            
+        </div>
+        <div class="col-md-9">
+            <div class="name"><a class="projectlink" href="https://www.meetup.com/owasp-gothenburg-meetup-group/">OWASP Göteborg</a></div>
+
+            <div class="links">
+            <strong>13:00 - 17:00</strong>
+            
+            </div>
+            
+            
+            <div class="abstract">
+                WirelessCar will host a meet with the OWASP Gothenburg chapter. More info to come.
+            </div>
+            
+            
+            <div class="abstract">
+                <b>Locations:</b>
+                <ul>
+                
+                    <li>WirelessCar, Vädursgatan 6, 412 50 Göteborg</li>
+                
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <a name="beers" class="offsetanchor"></a>
+    <div class="row speakerrow">
+        <div class="col-md-3">
+            <div class="speaker-photo"><a href="https://www.meetup.com/foss-gbg/events/306687986/"><img class="sp-image" src="images/project-beers.png" alt="Social Beers"></a></div>
+            
+        </div>
+        <div class="col-md-9">
+            <div class="name"><a class="projectlink" href="https://www.meetup.com/foss-gbg/events/306687986/">Social Beers</a></div>
+
+            <div class="links">
+            <strong>17:00 - Late</strong>
+            
+            </div>
+            
+            
+            <div class="abstract">
+                Finish the day with some beers or other beverages in the company of fellow foss nerds.
+            </div>
+            
+            <div class="abstract">
+                We'll meet up at Jerntorgets Brygghus. If it becomes too crowded, Andra Långgatan is full of pubs.
+            </div>
+            
+            
+            <div class="abstract">
+                <b>Locations:</b>
+                <ul>
+                
+                    <li>Järntorget 4, 413 04 Göteborg</li>
+                
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
 
 
 <script src="js/OpenLayers.js"></script>
@@ -205,6 +309,30 @@ your's <a href="tickets.html">here</a>!</p>
         /* Start of loop */
         marker = new OpenLayers.Marker(new OpenLayers.LonLat( 11.966646, 57.689343 ).transform(projection, map.getProjectionObject()), icon.clone());
         marker.events.register("click", marker, function() { location.hash = "#flutter"; });
+        markers.addMarker(marker);
+        /* End of loop */
+        
+    
+        
+        /* Start of loop */
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat( 11.993997, 57.70412 ).transform(projection, map.getProjectionObject()), icon.clone());
+        marker.events.register("click", marker, function() { location.hash = "#gbgcpp"; });
+        markers.addMarker(marker);
+        /* End of loop */
+        
+    
+        
+        /* Start of loop */
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat( 11.993997, 57.70412 ).transform(projection, map.getProjectionObject()), icon.clone());
+        marker.events.register("click", marker, function() { location.hash = "#owasp"; });
+        markers.addMarker(marker);
+        /* End of loop */
+        
+    
+        
+        /* Start of loop */
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat( 11.9494334, 57.6995811 ).transform(projection, map.getProjectionObject()), icon.clone());
+        marker.events.register("click", marker, function() { location.hash = "#beers"; });
         markers.addMarker(marker);
         /* End of loop */
         
