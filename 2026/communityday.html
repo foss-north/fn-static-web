@@ -109,6 +109,124 @@ your's <a href="tickets.html">here</a>!</p>
 
 
 
+    <a name="beers" class="offsetanchor"></a>
+    <div class="row speakerrow">
+        <div class="col-md-3">
+            <div class="speaker-photo"><a href="https://www.meetup.com/foss-gbg/events/313929789/"><img class="sp-image" src="images/project-beers.png" alt="Social Beers"></a></div>
+            
+        </div>
+        <div class="col-md-9">
+            <div class="name"><a class="projectlink" href="https://www.meetup.com/foss-gbg/events/313929789/">Social Beers</a></div>
+
+            <div class="links">
+            <strong>17:00 - 21:00</strong>
+            
+            </div>
+
+            
+            <div class="abstract">
+                Social meetup at a local pub. The perfect way to end the community day and charge the batteries before the conference days
+            </div>
+            
+            
+            <div class="abstract">
+                <b>Locations:</b>
+                <ul>
+                
+                    <li>Järntorget, 413 04 Göteborg</li>
+                
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <a name="ospo" class="offsetanchor"></a>
+    <div class="row speakerrow">
+        <div class="col-md-3">
+            <div class="speaker-photo"><a href="https://swedish-ospo-network.se/"><img class="sp-image" src="images/project-ospo.png" alt="Swedish OSPO network workshop"></a></div>
+            
+        </div>
+        <div class="col-md-9">
+            <div class="name"><a class="projectlink" href="https://swedish-ospo-network.se/">Swedish OSPO network workshop</a></div>
+
+            <div class="links">
+            <strong>Wed, April 29, 09:00 - 16:30</strong>
+            
+            </div>
+
+            
+            <div class="abstract">
+                The Swedish OSPO network is for any company that works strategically and systematically with open source issues. Participants include representatives from corporations, municipalities, government agencies and other interested parties
+            </div>
+            
+            <div class="abstract">
+                The OSPO network organizes a workshop on OpenChain on <b>wednesday</b>, the day <b>after</b> foss-north. The workshop is hosted by Wireless Car in Gothenburg. Use the link to join the network and sign up for the workshop.
+            </div>
+            
+            
+            <div class="abstract">
+                <b>Locations:</b>
+                <ul>
+                
+                    <li>WirelessCar, Vädursgatan 6, 412 50 Göteborg</li>
+                
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <a name="tdd" class="offsetanchor"></a>
+    <div class="row speakerrow">
+        <div class="col-md-3">
+            <div class="speaker-photo"><a href="https://www.meetup.com/foss-gbg/events/314090827/"><img class="sp-image" src="images/project-tdd.png" alt="Workshop: Test Driven Development for Everyone"></a></div>
+            
+        </div>
+        <div class="col-md-9">
+            <div class="name"><a class="projectlink" href="https://www.meetup.com/foss-gbg/events/314090827/">Workshop: Test Driven Development for Everyone</a></div>
+
+            <div class="links">
+            <strong>13-17 (tentative)</strong>
+            
+            </div>
+
+            
+            <div class="abstract">
+                Daniel Raniz Raneland hosts a workshop on test driven development
+            </div>
+            
+            <div class="abstract">
+                Test Driven Development (TDD) is a powerful approach that yields better, less buggy code. So why isn't everyone doing it?
+            </div>
+            
+            <div class="abstract">
+                In this hands-on workshop, I'll explain what TDD is and why I think it's so good. We'll also try it out for ourselves, using real-life examples. You'll get to see how TDD makes writing great code simpler and gives you a safety net for when you have to make big changes to your code.
+            </div>
+            
+            <div class="abstract">
+                We'll explore how to plan tests, the role of refactoring in TDD, and the benefits of incremental software design. Working in pairs (or triplets) is actively encouraged. Grab your laptop, a language you're comfortable with, and let's go!
+            </div>
+            
+            <div class="abstract">
+                <b>NOTE: sign up via the meetup link!</b>
+            </div>
+            
+            
+            <div class="abstract">
+                <b>Locations:</b>
+                <ul>
+                
+                    <li>Intunio, Korsgatan 24, 411 16 Göteborg</li>
+                
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+
+
 <script src="js/OpenLayers.js"></script>
 <script>
     map = new OpenLayers.Map("mapdiv", { controls: [] });
@@ -117,11 +235,40 @@ your's <a href="tickets.html">here</a>!</p>
     map.addControl(new OpenLayers.Control.PanZoomBar());
     map.addControl(new OpenLayers.Control.Permalink());
     map.addControl(new OpenLayers.Control.Permalink('permalink'));
-    
+
     var markers = new OpenLayers.Layer.Markers( "Markers" );
     map.addLayer(markers);
-    
+
     var projection = new OpenLayers.Projection("EPSG:4326");
+    
+    var icon = new OpenLayers.Icon("images/brand-logo.png");
+    var marker;
+
+    
+        
+        /* Start of loop */
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat( 11.951955, 57.699654 ).transform(projection, map.getProjectionObject()), icon.clone());
+        marker.events.register("click", marker, function() { location.hash = "#beers"; });
+        markers.addMarker(marker);
+        /* End of loop */
+        
+    
+        
+        /* Start of loop */
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat( 11.9908872, 57.7037949 ).transform(projection, map.getProjectionObject()), icon.clone());
+        marker.events.register("click", marker, function() { location.hash = "#ospo"; });
+        markers.addMarker(marker);
+        /* End of loop */
+        
+    
+        
+        /* Start of loop */
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat( 11.9644247, 57.7037829 ).transform(projection, map.getProjectionObject()), icon.clone());
+        marker.events.register("click", marker, function() { location.hash = "#tdd"; });
+        markers.addMarker(marker);
+        /* End of loop */
+        
+    
     
 
     map.setCenter(new OpenLayers.LonLat(11.9766646, 57.689343).transform(projection, map.getProjectionObject()), 13);
